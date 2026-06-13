@@ -8,3 +8,5 @@ RUN apt-get update && \
     usermod -aG docker jenkins
 
 USER jenkins
+# Добаляет ключи для подключения ssh git
+RUN mkdir -p ~/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts
