@@ -3,7 +3,7 @@ FROM jenkins/jenkins:lts-jdk21
 USER root
 
 RUN apt-get update && \
-    apt-get install -y docker-cli && \ 
+    apt-get install -y docker-cli maven && \ 
     groupadd -g 109 docker && \
     usermod -aG docker jenkins
 
